@@ -40,31 +40,31 @@
 
 
 public class SelectionSort {
-    public static void main(String[] arg){
-        int[] arr = { 64, 25, 12, 22, 11 };
+    public static void main(String[] arg) {
+        int[] arr = {64, 25, 12, 22, 11};
         int size = arr.length;
         int minIndex = -1;
 
         System.out.println("Before sorting");
-        for(int num : arr) {
+        for (int num : arr) {
             System.out.print(num + " ");
         }
 
 
-for(int i = 0; i < size -1; i++){
-    minIndex = i;
-    for(int j = i + 1; j < size; j++){
-        if(arr[minIndex] > arr[j]){
-            minIndex = j;
+        for (int i = 0; i < size - 1; i++) {
+            minIndex = i;
+            for (int j = i + 1; j < size; j++) {
+                if (arr[minIndex] > arr[j]) {
+                    minIndex = j;
+                }
+            }
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
         }
-    }
-    int temp = arr[minIndex];
-    arr[minIndex] = arr[i];
-    arr[i] = temp;
-}
 
         System.out.println("\nAfter sorting");
-        for (int num :arr) {
+        for (int num : arr) {
             System.out.print(num + " ");
         }
 
